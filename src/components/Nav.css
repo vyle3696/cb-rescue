@@ -1,0 +1,56 @@
+.nav-container {
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+
+}
+
+.nav-container-inner{
+    width: 100%;
+    height: 100%;
+}
+
+.nav-menu{
+    display: block;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.nav-menu-item{
+
+}
+
+.item-header{
+    background-color: #043831;
+    padding: 10px;
+    text-transform: uppercase;
+
+}
+
+.item-content{
+   
+    font-size: 15px;
+}
+
+.item-content p {
+    padding: 5px;
+    cursor: pointer;
+    margin:  0; 
+    padding-left: 20px;
+}
+
+.item-content p i {
+    padding: 0 5px;
+}
+
+#list-device{
+    background-color: #ffffff;
+    color: #428bca;
+}
+
+
+
+
+
