@@ -1,9 +1,19 @@
+
+.item-device{
+    cursor: pointer;
+    background-color: whitesmoke;
+}
+
+.item-device:hover{
+    background-color: white;
+    
+}
 .list-property {
     list-style-type: none;
     margin: 0;
     overflow: hidden;
     border: 1px solid #6d5858;
-    background-color: whitesmoke;
+    
 }
 
 .list-property li{

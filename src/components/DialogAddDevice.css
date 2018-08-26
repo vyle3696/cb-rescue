@@ -28,18 +28,39 @@
 }
 
 .dialog-form{
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
     margin: 0 auto;
     background-color: #fff;
-    border: 1px solid #bce8f1;
     border-radius: 4px;
+    text-align: center;
 }
 
 .form-heading{
-    color: #31708f;
-    background-color: #d9edf7;
-    border-color: #bce8f1;
-    text-align: center;
+
+    text-align: left;
     padding:10px;
+    font-weight: 800;
+}
+
+.form-heading span {
+    float: right;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.form-heading span:hover{
+    opacity: 1;
+    color: red;
+}
+
+.form-content {
+    margin: 0 auto;
+    width: max-content;
+    padding: 10px;
+}
+
+#add-device-submit{
+    text-align: center;
+    margin: 20px;
 }
