@@ -2,6 +2,7 @@
 .item-device{
     cursor: pointer;
     background-color: whitesmoke;
+    position: relative;
 }
 
 .item-device:hover{
@@ -12,7 +13,7 @@
     list-style-type: none;
     margin: 0;
     overflow: hidden;
-    border: 1px solid #6d5858;
+    
     
 }
 
@@ -26,9 +27,10 @@
 }
 
 .btn-remove {
+    position: absolute;
     font-size: 25px;
     color: red;
     cursor: pointer;
-    float: right;
     padding: 20px;
+    right: 0;
 }

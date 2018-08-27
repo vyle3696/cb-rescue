@@ -4,6 +4,7 @@
     height: 100vh;
     background-color: black;
     color: white;
+    padding: 10px;
 
 }
 
@@ -32,6 +33,29 @@
 .item-content{
    
     font-size: 15px;
+    color: white;
+    
+}
+
+.item-content p{
+    opacity: 0.6;
+}
+
+.item-content p:hover{
+    opacity: 1;
+}
+
+.item-content a {
+    color: inherit;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+.item-active {
+    opacity: 1!important;
 }
 
 .item-content p {
@@ -47,7 +71,6 @@
 
 #list-device{
     
-    color: #428bca;
 }
 
 

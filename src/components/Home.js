@@ -48,19 +48,26 @@ class Home extends React.Component {
 	}
     
     render(){
-        return(
-            <div>
-                
+        if(!this.props.listDevice) {
+            return(<div>No data</div>)
+        }else{
+            return(
                 <div>
-                {
-                    this.state.listDevice.map((item, index)=>(
-                        <ItemDevice key={index} content={item}/>
-                    ))
-                }
+                    
+                    <div>
+                    {
+                        this.props.listDevice.map((item, index)=>(
+                            <ItemDevice key={index} content={item} root = {this.props.root}/>
+                        ))
+                    }
+                    </div>
+                    
                 </div>
-                
-            </div>
-        );
+            );
+        }
+        
+
+        
     }
 }
 

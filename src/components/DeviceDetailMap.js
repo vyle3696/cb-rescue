@@ -1,26 +1,18 @@
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import React from 'react';
 import {API} from '../services/API'; 
-import ItemDevice from './ItemDevice';
 
-export class MapContainer extends React.Component {
+
+
+export class DeviceDetailMap extends React.Component {
   state = {
     showingInfoWindow: false,
     activeMarker: {},
     selectedPlace: {},
-    listDevice: []
+    device: {}
     };
 
-    onGetListDevice(){
-        let that = this;
-        API.getListDevice()
-        .then((response)=>{
-                that.setState({listDevice: response.data});
-        });
-    }
-
     componentDidMount(){
-        this.onGetListDevice();
     }
  
   onMarkerClick = (props, marker, e) =>
@@ -40,12 +32,6 @@ export class MapContainer extends React.Component {
   };
  
   render() {
-    var points = [
-      { lat: 42.02, lng: -77.01 },
-      { lat: 42.03, lng: -77.02 },
-      { lat: 41.03, lng: -77.04 },
-      { lat: 42.05, lng: -77.02 }
-    ]
     
     return (
         <div className="map-view">
@@ -53,17 +39,14 @@ export class MapContainer extends React.Component {
                 style={{width: '100%', height: '100%', position: 'relative'}}
                 google={this.props.google}
                 initialCenter={{
-                    lat: 10.799455,
-                    lng: 106.673024
+                    lat: this.props.deviceDetail.latitude,
+                    lng: this.props.deviceDetail.longitude
                 }}> 
 
-
-                {this.state.listDevice.map((item, index)=>(
-                    <Marker 
-                    title={'The marker`s title will appear as a tooltip.'}
-                    name={'SOMA'}
-                    position={{lat: item.latitude, lng: item.longitude}} />
-                ))}
+                <Marker 
+                title={'The marker`s title will appear as a tooltip.'}
+                name={'SOMA'}
+                position={{lat: this.props.deviceDetail.latitude, lng: this.props.deviceDetail.longitude}} />
 
                 <InfoWindow
                     marker={this.state.activeMarker}
@@ -80,7 +63,7 @@ export class MapContainer extends React.Component {
 }
  
 export default GoogleApiWrapper({
-  apiKey: ("AIzaSyDOCEU5TN_xnJ1HzbSqeRDq9lIJHwubXLs")
-})(MapContainer)
+  apiKey: ("AIzaSyCl_thtuSPjbSzMgtzWYMUDxEHRCj466QE")
+})(DeviceDetailMap)
 
 

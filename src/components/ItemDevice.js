@@ -14,13 +14,16 @@ class ItemDevice extends React.Component {
     constructor(props){
         super(props);
         this.onRemoveDeviceClick = this.onRemoveDeviceClick.bind(this);
-       
     }
 
-    onRemoveDeviceClick(){
+    onRemoveDeviceClick(e){
+        let that = this;
+        e.stopPropagation();
+
         API.removeDevice(this.props.content.id)
         .then((response)=>{
             window.alert("delete device success!");
+            that.props.root.onGetListDevice();
         })
         .catch((error)=>{
             window.alert("delete device failed!");
@@ -30,29 +33,36 @@ class ItemDevice extends React.Component {
 
     render(){
         return(
-            <Link to={`/detail/${this.props.content.id}`}><div className="item-device">
-                <ul className="list-property">
-                    <li className="device-property">
-                        <span className="property-name">imei</span>
-                        <span className="property-info">{this.props.content.imei}</span>
-                    </li>
-                    <li className="device-property">
-                        <span className="property-name">type</span>
-                        <span className="property-info">{this.props.content.type}</span>
-                    </li>
-                    <li className="device-property">
-                        <span className="property-name">status</span>
-                        <span className="property-info">{this.props.content.status}</span>
-                    </li>
-                    <li className="device-property">
-                        <span className="property-name">battery</span>
-                        <span className="property-info">{this.props.content.battery}</span>
-                        
-                    </li>
-                    <span className="btn-remove glyphicon glyphicon-remove-circle" onClick={this.onRemoveDeviceClick}></span>
+            <div className="item-device">
+                <Link to={`/detail/${this.props.content.id}`}>
+                    <ul className="list-property">
+                         <li className="device-property">
+                            <span className="property-name">name</span>
+                            <span className="property-info">{this.props.content.name}</span>
+                        </li>
+                        <li className="device-property">
+                            <span className="property-name">imei</span>
+                            <span className="property-info">{this.props.content.imei}</span>
+                        </li>
+                        <li className="device-property">
+                            <span className="property-name">type</span>
+                            <span className="property-info">{this.props.content.type}</span>
+                        </li>
+                        <li className="device-property">
+                            <span className="property-name">status</span>
+                            <span className="property-info">{this.props.content.status}</span>
+                        </li>
+                        <li className="device-property">
+                            <span className="property-name">battery</span>
+                            <span className="property-info">{this.props.content.battery}</span>
+                            
+                        </li>
                     
-                </ul>
-            </div></Link>
+                    
+                    </ul>
+                </Link>
+                <span className="btn-remove glyphicon glyphicon-remove-circle" onClick={this.onRemoveDeviceClick}></span>
+            </div>
         );
     }
 }
