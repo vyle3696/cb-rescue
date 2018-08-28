@@ -17,12 +17,12 @@
     
 }
 
-.list-property li{
+.device-property{
     display: inline-block;
     padding: 20px 40px;
 }
 
-.list-property li span {
+.device-property span {
     padding:5px;
 }
 

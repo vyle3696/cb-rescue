@@ -35,31 +35,30 @@ class ItemDevice extends React.Component {
         return(
             <div className="item-device">
                 <Link to={`/detail/${this.props.content.id}`}>
-                    <ul className="list-property">
-                         <li className="device-property">
+                    <div className="list-property">
+                         <div className="device-property">
                             <span className="property-name">name</span>
                             <span className="property-info">{this.props.content.name}</span>
-                        </li>
-                        <li className="device-property">
+                        </div>
+                        <div className="device-property">
                             <span className="property-name">imei</span>
                             <span className="property-info">{this.props.content.imei}</span>
-                        </li>
-                        <li className="device-property">
+                        </div>
+                        <div className="device-property">
                             <span className="property-name">type</span>
                             <span className="property-info">{this.props.content.type}</span>
-                        </li>
-                        <li className="device-property">
+                        </div>
+                        <div className="device-property">
                             <span className="property-name">status</span>
                             <span className="property-info">{this.props.content.status}</span>
-                        </li>
-                        <li className="device-property">
+                        </div>
+                        <div className="device-property">
                             <span className="property-name">battery</span>
                             <span className="property-info">{this.props.content.battery}</span>
-                            
-                        </li>
+                        </div>
                     
                     
-                    </ul>
+                    </div>
                 </Link>
                 <span className="btn-remove glyphicon glyphicon-remove-circle" onClick={this.onRemoveDeviceClick}></span>
             </div>

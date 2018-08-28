@@ -15,4 +15,137 @@ html {
 }
 
 
+.inbox-head {
+    background: none repeat scroll 0 0 #41cac0;
+    border-radius: 0 4px 0 0;
+    color: #fff;
+    min-height: 80px;
+    padding: 20px;
+}
+.inbox-head h3 {
+    display: inline-block;
+    font-weight: 300;
+    margin: 0;
+    padding-top: 6px;
+}
+.inbox-head .sr-input {
+    border: medium none;
+    border-radius: 4px 0 0 4px;
+    box-shadow: none;
+    color: #8a8a8a;
+    float: left;
+    height: 40px;
+    padding: 0 10px;
+}
+.inbox-head .sr-btn {
+    background: none repeat scroll 0 0 #00a6b2;
+    border: medium none;
+    border-radius: 0 4px 4px 0;
+    color: #fff;
+    height: 40px;
+    padding: 0 20px;
+}
+
+
+/*************************************************************************/
+
+.device-table-box {
+	overflow: auto;
+	border-left: 1px solid #dce3f2; 
+	border-right: 1px solid #dce3f2;
+	border-radius: 5px;
+}
+
+.device-table-box::-webkit-scrollbar {
+	height: 8px !important;
+}
+
+/*.device-table-box::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+
+
+.device-table-box::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #d3d3d3;
+}*/
+
+.device-table {
+  	position: relative;
+    display: table;
+    flex-direction: column;   
+    width: 100%;          
+}
+
+.device-table-row-box {
+	border-left: 1px solid  #eff3fc;
+	border-right: 1px solid  #eff3fc;
+	border-bottom: 1px solid  #eff3fc;
+}
+
+.device-table-row {
+    display: table-row; 
+    width: max-content;
+}
+
+/*.device-table-row:last-child .device-table-col:first-child{
+	border-bottom-left-radius: 4px;
+}
+
+.device-table-row:last-child .device-table-col:last-child{
+	border-bottom-right-radius: 4px;
+}*/
+
+.device-table-col {
+  	display: table-cell;
+  	text-align: center;
+	padding: 20px;
+	vertical-align: top;
+	border-bottom: 1px solid #dce3f2;       
+}
+
+
+
+/*.device-table-col:first-child {
+	border-left: 1px solid #dce3f2; 
+}
+
+.device-table-col:last-child {
+	border-right: 1px solid #dce3f2; 
+}*/
+
+.device-table-row-header{
+	color: #5575b9;
+    background-color: #d1e0e0;
+    /*border-top-left-radius: 4px;
+    border-top-right-radius: 4px;*/
+}
+
+.device-table-row-header .device-table-col {
+	padding: 15px 20px;
+	vertical-align: middle;
+	border-bottom: none;   
+}
+
+.device-table-col.device-table-col-user {
+	text-align: left;
+	min-width:200px;
+}
+
+.device-table-col.device-table-col-button {
+	text-align: right;
+    padding-top:15px;
+    padding-right: 20px;
+    min-width:90px;
+}
+
+.device-table-col.device-table-col-button > .gitobtn.medium.cloud {
+	float:right;
+}
+
+
 
